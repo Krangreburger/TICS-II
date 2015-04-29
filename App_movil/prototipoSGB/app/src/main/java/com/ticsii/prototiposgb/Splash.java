@@ -48,10 +48,12 @@ public class Splash extends ActionBarActivity {
 
         ProgressDialog dialog;
 
-        ArrayList<Articulo> articulo = new ArrayList<Articulo>(Arrays.asList(
-            new Articulo("La Biblia", 1 ,"Diosito", 1998, 1, 0, 0, "ACME", 1500, "La verdad absoluta"),
-            new Articulo("Control Remoto", 3 ,null, 2015, 1, 0, 0, "Sony", 1000, "Mejor que la biblia")
-        ));
+        ArrayList<Articulo> articulo = new ArrayList<Articulo>(
+                Arrays.asList(
+                    new Articulo("La Biblia", 1 ,"Diosito", 1998, 1, 0, 0, "ACME", 1500, "La verdad absoluta"),
+                    new Articulo("Control Remoto", 3 ,null, 2015, 1, 0, 0, "Sony", 1000, "Mejor que la biblia")
+                )
+        );
 
         @Override
         protected void onPreExecute() {
@@ -78,7 +80,7 @@ public class Splash extends ActionBarActivity {
             for(int i = 0 ; i<articulo.size();i++){
                 Articulo art = new Articulo();
                 art = articulo.get(i);
-                helper.insertarPreguntas(art);
+                helper.insertarArticulo(art);
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {

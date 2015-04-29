@@ -34,7 +34,7 @@ public class DBmanager extends SQLiteOpenHelper{
         return valores;
     }
 
-    public void insertarPreguntas(Articulo articulo){
+    public void insertarArticulo(Articulo articulo){
         db.insert(Articulo.TABLE_NAME, null,generarValores(articulo) );
 
     }

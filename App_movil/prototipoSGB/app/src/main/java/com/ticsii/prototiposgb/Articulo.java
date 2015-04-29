@@ -25,7 +25,7 @@ public class Articulo {
             FIELD_CATEGORIA + " integer," +
             FIELD_AUTOR + " text," +
             FIELD_AÑO + " numeric," +
-            FIELD_ESTADO + " integer" +
+            FIELD_ESTADO + " integer," +
             FIELD_PROVEEDOR + " integer," +
             FIELD_UBICACION + " integer," +
             FIELD_MARCA + " text," +

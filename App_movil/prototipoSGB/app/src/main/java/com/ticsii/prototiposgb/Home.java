@@ -12,6 +12,6 @@ public class Home extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
+        DBmanager helper= new DBmanager(this);
     }
 }
