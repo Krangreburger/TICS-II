@@ -4,7 +4,7 @@ package com.ticsii.prototiposgb;
  * Created by flarenaster on 28-04-15.
  */
 public class Articulo {
-    public static final String TABLE_NAME = "articulo";
+    public static final String TABLE_NAME = "articuló";
     public static final String FIELD_ID = "_id";
     public static final String FIELD_NOMBRE = "nombre";
     public static final String FIELD_CATEGORIA= "categoria";
