@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffc535"
-    android:id="@+id/home"
-    android:orientation="vertical"
-    android:weightSum="1">
+    android:id="@+id/home">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtpalabra"
+        android:layout_gravity="center_horizontal" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -32,21 +36,10 @@
 
     </LinearLayout>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="432dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="1.13">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="156dp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Bienvenido a SGB"
-            android:id="@+id/textView3"
-            android:layout_gravity="center"
-            android:textSize="32dp"
-            android:textStyle="normal" />
-    </FrameLayout>
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
 
 </LinearLayout>
