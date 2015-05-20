@@ -28,6 +28,22 @@
             android:name=".Search"
             android:label="@string/title_activity_search" >
         </activity>
+        <activity
+            android:name=".test"
+            android:label="@string/title_activity_test" >
+        </activity>
+        <activity
+            android:name=".Adaptador"
+            android:label="@string/title_activity_elemento" >
+        </activity>
+        <activity
+            android:name=".elemento"
+            android:label="@string/title_activity_elemento" >
+        </activity>
+        <activity
+            android:name=".Detalle"
+            android:label="@string/title_activity_detalle" >
+        </activity>
     </application>
 
 </manifest>

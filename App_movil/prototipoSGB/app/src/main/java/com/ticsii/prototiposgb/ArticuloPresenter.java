@@ -44,8 +44,6 @@ public class ArticuloPresenter extends SQLiteOpenHelper{
 
     public ArrayList<Articulo> buscarNombre(String palabra){
         ArrayList<Articulo> articulos = new ArrayList<>();
-        String columnas[]={Articulo.FIELD_ID,Articulo.FIELD_NOMBRE, Articulo.FIELD_AUTOR};
-        //Cursor c = db.query(Articulo.TABLE_NAME, columnas, null, null, null, null, null);
         String consulta = "SELECT * FROM "+Articulo.TABLE_NAME+" WHERE "+Articulo.FIELD_NOMBRE+" LIKE '%"+palabra+"%' OR "+Articulo.FIELD_AUTOR+" LIKE '%"+palabra+"%'";
         Cursor c = db.rawQuery(consulta,null);
         if(c.moveToFirst()){
@@ -53,7 +51,12 @@ public class ArticuloPresenter extends SQLiteOpenHelper{
                 Articulo a = new Articulo();
                 a.setId(c.getInt(0));
                 a.setNombre(c.getString(1));
+                a.setCategoria(c.getInt(2));
                 a.setAutor(c.getString(3));
+                a.setAño(c.getInt(4));
+                a.setEstado(c.getInt(5));
+                a.setMarca(c.getString(8));
+                a.setDescripcion(c.getString(10));
                 articulos.add(a);
             }while (c.moveToNext());
         }
