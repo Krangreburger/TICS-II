@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,14 +43,28 @@ public class Search extends ListActivity {
             }
         });
         ArticuloPresenter presenter = new ArticuloPresenter(this);
-        ArrayList<Articulo> art = presenter.buscarNombre(palabra);
-        if(!art.isEmpty()){
-            String[] a= new String[art.size()];
-            for(int i=0; i<art.size();i++){
-                a[i]= art.get(i).getNombre();
-            }
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(getListView().getContext(),android.R.layout.simple_list_item_1,a);
-            getListView().setAdapter(adapter);
+        final ArrayList<Articulo> listaArticulos = presenter.buscarNombre(palabra);
+        if(!listaArticulos.isEmpty()){
+            Adaptador adapter = new Adaptador(this, listaArticulos);
+            ListView lv = getListView();
+            lv.setAdapter(adapter);
+            lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Articulo art =(Articulo)getListView().getItemAtPosition(position);
+                    Intent detalle= new Intent();
+                    detalle.putExtra("id", art.getId());
+                    detalle.putExtra("nombre", art.getNombre());
+                    detalle.putExtra("categoria", art.getCategoria());
+                    detalle.putExtra("autor", art.getAutor());
+                    detalle.putExtra("año", art.getAño());
+                    detalle.putExtra("marca", art.getMarca());
+                    detalle.putExtra("estado", art.getEstado());
+                    detalle.putExtra("descripcion", art.getDescripcion());
+                    detalle.setClass(Search.this, Detalle.class);
+                    startActivity(detalle);
+                }
+            });
         }
 
     }
