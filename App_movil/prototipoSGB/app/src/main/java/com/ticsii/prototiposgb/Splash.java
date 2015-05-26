@@ -50,25 +50,25 @@ public class Splash extends ActionBarActivity {
 
         ArrayList<Articulo> articulo = new ArrayList<Articulo>(
                 Arrays.asList(
-                    new Articulo("La Biblia", 1 ,"Diosito", 1998, 1, 0, 0, "ACME", 1500, "La verdad absoluta"),
-                    new Articulo("Control Remoto", 3 ,null, 2015, 1, 0, 0, "Sony", 1000, "Mejor que la biblia"),
-                    new Articulo("La Biblia 2: Reloaded", 1 ,"Diosito", 1998, 1, 0, 0, "ACME", 1500, "La verdad absoluta"),
-                    new Articulo("Control Remoto 2", 3 ,null, 2015, 1, 0, 0, "Sony", 1000, "Mejor que la biblia"),
-                    new Articulo("La Biblia 3: De Vacaciones", 1 ,"Diosito", 1998, 1, 0, 0, "ACME", 1500, "La verdad absoluta"),
-                    new Articulo("Control Remoto 3", 3 ,null, 2015, 1, 0, 0, "Sony", 1000, "Mejor que la biblia"),
-                    new Articulo("La Biblia 4: Misión Siria", 1 ,"Diosito", 1998, 1, 0, 0, "ACME", 1500, "La verdad absoluta"),
-                    new Articulo("Control Remoto 4", 3 ,null, 2015, 1, 0, 0, "Sony", 1000, "Mejor que la biblia"),
-                    new Articulo("La Biblia 5: Mahoma Aparece, Amigo o Enemigo", 1 ,"Diosito", 1998, 1, 0, 0, "ACME", 1500, "La verdad absoluta"),
-                    new Articulo("Control Remoto 5", 3 ,null, 2015, 1, 0, 0, "Sony", 1000, "Mejor que la biblia"),
-                    new Articulo("La Biblia 6: Crisis en Tierras Infinitas", 1 ,"Diosito", 1998, 1, 0, 0, "ACME", 1500, "La verdad absoluta"),
-                    new Articulo("Control Remoto 6", 3 ,null, 2015, 1, 0, 0, "Sony", 1000, "Mejor que la biblia"),
-                    new Articulo("La Biblia 7: JC, un Nuevo Despertar", 1 ,"Diosito", 1998, 1, 0, 0, "ACME", 1500, "La verdad absoluta"),
-                    new Articulo("Control Remoto 7", 3 ,null, 2015, 1, 0, 0, "Sony", 1000, "Mejor que la biblia"),
-                    new Articulo("La Biblia 8: JC, Superando Límites", 1 ,"Diosito", 1998, 1, 0, 0, "ACME", 1500, "La verdad absoluta"),
-                    new Articulo("La Biblia 9: En el Espacio", 1 ,"Diosito", 1998, 1, 0, 0, "ACME", 1500, "La verdad absoluta"),
-                    new Articulo("La Biblia X Parte 1: El Ministerio de Mal", 1 ,"Diosito", 1998, 1, 0, 0, "ACME", 1500, "La verdad absoluta"),
-                    new Articulo("La Biblia X Parte 2: La Última Esperanza, Gokú ha Llegado", 1 ,"Diosito", 1998, 1, 0, 0, "ACME", 1500, "La verdad absoluta"),
-                    new Articulo("La Biblia Ultimate", 1 ,"Diosito", 1998, 1, 0, 0, "ACME", 1500, "La verdad absoluta")
+                    new Articulo("La Biblia", 1 ,"Diosito", 1998, 0, "ACME", 1500, "La verdad absoluta"),
+                    new Articulo("Control Remoto", 3 ,null, 2015, 0, "Sony", 1000, "Mejor que la biblia"),
+                    new Articulo("La Biblia 2: Reloaded", 1 ,"Diosito", 1998, 0, "ACME", 1500, "La verdad absoluta"),
+                    new Articulo("Control Remoto 2", 3 ,null, 2015, 0, "Sony", 1000, "Mejor que la biblia"),
+                    new Articulo("La Biblia 3: De Vacaciones", 1 ,"Diosito", 1998, 0, "ACME", 1500, "La verdad absoluta"),
+                    new Articulo("Control Remoto 3", 3 ,null, 2015, 0, "Sony", 1000, "Mejor que la biblia"),
+                    new Articulo("La Biblia 4: Misión Siria", 1 ,"Diosito", 1998, 0, "ACME", 1500, "La verdad absoluta"),
+                    new Articulo("Control Remoto 4", 3 ,null, 2015, 0, "Sony", 1000, "Mejor que la biblia"),
+                    new Articulo("La Biblia 5: Mahoma Aparece, Amigo o Enemigo", 1 ,"Diosito", 1998, 0, "ACME", 1500, "La verdad absoluta"),
+                    new Articulo("Control Remoto 5", 3 ,null, 2015, 0, "Sony", 1000, "Mejor que la biblia"),
+                    new Articulo("La Biblia 6: Crisis en Tierras Infinitas", 1 ,"Diosito", 1998, 0, "ACME", 1500, "La verdad absoluta"),
+                    new Articulo("Control Remoto 6", 3 ,null, 2015, 0, "Sony", 1000, "Mejor que la biblia"),
+                    new Articulo("La Biblia 7: JC, un Nuevo Despertar", 1 ,"Diosito", 1998, 0, "ACME", 1500, "La verdad absoluta"),
+                    new Articulo("Control Remoto 7", 3 ,null, 2015, 0, "Sony", 1000, "Mejor que la biblia"),
+                    new Articulo("La Biblia 8: JC, Superando Límites", 1 ,"Diosito", 1998, 0, "ACME", 1500, "La verdad absoluta"),
+                    new Articulo("La Biblia 9: En el Espacio", 1 ,"Diosito", 1998, 0, "ACME", 1500, "La verdad absoluta"),
+                    new Articulo("La Biblia X Parte 1: El Ministerio de Mal", 1 ,"Diosito", 1998, 0, "ACME", 1500, "La verdad absoluta"),
+                    new Articulo("La Biblia X Parte 2: La Última Esperanza, Gokú ha Llegado", 1 ,"Diosito", 1998, 0, "ACME", 1500, "La verdad absoluta"),
+                    new Articulo("La Biblia Ultimate", 1 ,"Diosito", 1998, 0, "ACME", 1500, "La verdad absoluta")
                 )
         );
 
@@ -93,7 +93,7 @@ public class Splash extends ActionBarActivity {
 
         @Override
         protected Void doInBackground(Void... params) {
-            ArticuloPresenter helper = new ArticuloPresenter(Splash.this);
+            DBManager helper = new DBManager(Splash.this);
             for(int i = 0 ; i<articulo.size();i++){
                 Articulo art = new Articulo();
                 art = articulo.get(i);

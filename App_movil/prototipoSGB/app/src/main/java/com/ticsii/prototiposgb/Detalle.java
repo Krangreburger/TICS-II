@@ -24,7 +24,6 @@ public class Detalle extends ActionBarActivity {
         TextView txtcategoria = (TextView)findViewById(R.id.txtcategoria);
         TextView txtautor = (TextView)findViewById(R.id.txtautor);
         TextView txtaño = (TextView)findViewById(R.id.txtaño);
-        TextView txtestado = (TextView)findViewById(R.id.txtestado);
         TextView txtmarca = (TextView)findViewById(R.id.txtmarca);
         TextView txtdescripcion = (TextView)findViewById(R.id.txtdescripcion);
 
@@ -35,7 +34,6 @@ public class Detalle extends ActionBarActivity {
         txtcategoria.setText("CATEGORÍA: " + String.valueOf(b.getInt("categoria")));
         txtautor.setText("AUTOR: " + b.getString("autor"));
         txtaño.setText("AÑO: " + String.valueOf(b.getInt("año")));
-        txtestado.setText("ESTADO: " + String.valueOf(b.getInt("estado")));
         txtmarca.setText("EDITORIAL/MARCA: " + b.getString("marca"));
         txtdescripcion.setText("DESCRIPCIÓN: " + b.getString("descripcion"));
 

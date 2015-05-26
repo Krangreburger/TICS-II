@@ -11,13 +11,13 @@ import java.util.ArrayList;
 /**
  * Created by flarenaster on 28-04-15.
  */
-public class ArticuloPresenter extends SQLiteOpenHelper{
+public class DBManager extends SQLiteOpenHelper{
 
     private static final String DB_NAME = "SGB";
     private static final int SCHEME_VERSION = 1;
     private SQLiteDatabase db;
 
-    public ArticuloPresenter(Context context) {
+    public DBManager(Context context) {
         super(context, DB_NAME, null, SCHEME_VERSION);
         db = this.getWritableDatabase();
     }
@@ -28,9 +28,7 @@ public class ArticuloPresenter extends SQLiteOpenHelper{
         valores.put(Articulo.FIELD_CATEGORIA , articulo.getCategoria());
         valores.put(Articulo.FIELD_AUTOR , articulo.getAutor());
         valores.put(Articulo.FIELD_AÑO , articulo.getAño());
-        valores.put(Articulo.FIELD_ESTADO , articulo.getEstado());
         valores.put(Articulo.FIELD_PROVEEDOR , articulo.getProveedor());
-        valores.put(Articulo.FIELD_UBICACION , articulo.getUbicacion());
         valores.put(Articulo.FIELD_MARCA , articulo.getMarca());
         valores.put(Articulo.FIELD_PRECIO , articulo.getPrecio());
         valores.put(Articulo.FIELD_DESCRIPCION , articulo.getDescripcion());
@@ -38,7 +36,7 @@ public class ArticuloPresenter extends SQLiteOpenHelper{
     }
 
     public void insertarArticulo(Articulo articulo){
-        db.insert(Articulo.TABLE_NAME, null,generarValores(articulo) );
+        db.insert(Articulo.TABLE_NAME, null, generarValores(articulo));
 
     }
 
@@ -54,14 +52,34 @@ public class ArticuloPresenter extends SQLiteOpenHelper{
                 a.setCategoria(c.getInt(2));
                 a.setAutor(c.getString(3));
                 a.setAño(c.getInt(4));
-                a.setEstado(c.getInt(5));
-                a.setMarca(c.getString(8));
-                a.setDescripcion(c.getString(10));
+                a.setMarca(c.getString(6));
+                a.setDescripcion(c.getString(8));
                 articulos.add(a);
             }while (c.moveToNext());
         }
         return articulos;
     }
+
+    private ContentValues generarUsuarios(Articulo articulo){
+        ContentValues valores = new ContentValues();
+        valores.put(Articulo.FIELD_NOMBRE, articulo.getNombre());
+        valores.put(Articulo.FIELD_CATEGORIA , articulo.getCategoria());
+        valores.put(Articulo.FIELD_AUTOR , articulo.getAutor());
+        valores.put(Articulo.FIELD_AÑO , articulo.getAño());
+        valores.put(Articulo.FIELD_PROVEEDOR , articulo.getProveedor());
+        valores.put(Articulo.FIELD_MARCA , articulo.getMarca());
+        valores.put(Articulo.FIELD_PRECIO , articulo.getPrecio());
+        valores.put(Articulo.FIELD_DESCRIPCION , articulo.getDescripcion());
+        return valores;
+    }
+
+    public void insertarUsuario(Articulo articulo){
+        db.insert(Articulo.TABLE_NAME, null, generarValores(articulo));
+
+    }
+
+
+
 
     @Override
     public void onCreate(SQLiteDatabase db) {

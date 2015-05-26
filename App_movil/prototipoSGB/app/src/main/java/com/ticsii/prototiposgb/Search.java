@@ -7,7 +7,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -42,7 +41,7 @@ public class Search extends ListActivity {
                 }
             }
         });
-        ArticuloPresenter presenter = new ArticuloPresenter(this);
+        DBManager presenter = new DBManager(this);
         final ArrayList<Articulo> listaArticulos = presenter.buscarNombre(palabra);
         if(!listaArticulos.isEmpty()){
             Adaptador adapter = new Adaptador(this, listaArticulos);
@@ -59,7 +58,6 @@ public class Search extends ListActivity {
                     detalle.putExtra("autor", art.getAutor());
                     detalle.putExtra("año", art.getAño());
                     detalle.putExtra("marca", art.getMarca());
-                    detalle.putExtra("estado", art.getEstado());
                     detalle.putExtra("descripcion", art.getDescripcion());
                     detalle.setClass(Search.this, Detalle.class);
                     startActivity(detalle);
